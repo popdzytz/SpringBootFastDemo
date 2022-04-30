@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/sduinfo?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
+    username: root
+    password: popdzytz
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: testA1B6N6!
+    database: 0
+    timeout: 18000
+    lettuce:
+      pool:
+        max-active: 20
+        max-wait: -1
+        max-idle: 5
+        min-idle: 0
+
+server:
+  port: 8888 #服务端口
+  tomcat:
+    max-http-form-post-size: 5MB
+    max-swallow-size: 10MB
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
